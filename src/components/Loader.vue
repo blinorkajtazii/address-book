@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
   props: {
@@ -19,16 +19,22 @@ export default defineComponent({
 
 <style scoped>
 .loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  z-index: 9999;
 }
 
 .spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  width: 36px;
-  height: 36px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border-left-color: #09f;
   animation: spin 1s ease infinite;
