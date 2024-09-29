@@ -31,6 +31,6 @@ This is a client-side address book application built using **Vue 3**, **TypeScri
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd my-address-book
+   git clone https://github.com/blinorkajtazii/address-book.git
+   cd address-book
    ```
