@@ -1,0 +1,42 @@
+<template>
+  <div class="loader" v-if="isLoading">
+    <div class="spinner"></div>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, PropType } from "vue";
+
+export default defineComponent({
+  props: {
+    isLoading: {
+      type: Boolean,
+      required: true,
+    },
+  },
+});
+</script>
+
+<style scoped>
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #09f;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
